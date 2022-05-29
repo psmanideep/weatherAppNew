@@ -1,0 +1,35 @@
+.search-container {
+  margin: 0 15px 60px 15px;
+  .search-block {
+    position: relative;
+    .search-box {
+      width: 100%;
+      padding: 20px 50px 20px 20px;
+      background: #1e202b;
+      color: white;
+      outline: none;
+      border: none;
+      border-radius: 30px;
+      box-sizing: border-box;
+    }
+    .search-submit {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      // bottom: 5px;
+      padding: 5px 40px;
+      outline: none;
+      border: none;
+      // background: #009ad8;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
+  .error-block {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    color: rgb(255, 0, 0);
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,62 @@
+.weather-card {
+  background: #323544;
+  padding: 0;
+  margin: 15px;
+  color: #ffffff;
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #44446a;
+    font-size: 18px;
+    border-radius: 4px 4px 0px 0px;
+  }
+  &-content {
+    padding: 20px;
+    .city {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .temperature {
+      display: flex;
+      align-items: center;
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      .degree {
+        margin-right: 20px;
+      }
+      .icon {
+        img {
+          height: 120px;
+          margin-top: 10px;
+        }
+      }
+    }
+    .other-values {
+      display: flex;
+      align-items: center;
+      > div {
+        margin-right: 10px;
+      }
+      .key {
+        font-size: 16px;
+        color: #939393;
+      }
+      .value {
+        font-size: 18px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    &-content {
+      .temperature {
+        font-size: 40px;
+        .degree {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}

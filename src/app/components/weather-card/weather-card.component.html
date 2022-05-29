@@ -1,0 +1,32 @@
+<mat-card *ngIf="weatherData?.dataLoaded" class="weather-card">
+  <mat-card-title class="weather-card-header">
+    <div class="day">{{ weatherData?.dt | customDate: dayFormat }}</div>
+    <div class="date">{{ weatherData?.dt | customDate: dateFormat }}</div>
+  </mat-card-title>
+  <mat-card-content class="weather-card-content">
+    <div class="city">{{ weatherData?.name }}</div>
+    <div class="temperature">
+      <div class="degree">{{ weatherData?.main?.temp }} <sup>o</sup> C</div>
+      <div class="icon">
+        <img
+          src="http://openweathermap.org/img/w/{{weatherData?.weather?.[0].icon}}.png"
+          alt="svgIcon"
+        />
+      </div>
+    </div>
+    <div class="other-values">
+      <div class="humidity">
+        <span class="key">Humidity : </span>
+        <span class="value">{{ weatherData?.main?.humidity }}</span>
+      </div>
+      <div class="wind-speed">
+        <span class="key">Wind Speed : </span>
+        <span class="value">{{ weatherData?.wind?.speed }} km/h</span>
+      </div>
+      <div class="clouds">
+        <span class="key">Clouds : </span>
+        <span class="value">{{ weatherData?.clouds?.all }} %</span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

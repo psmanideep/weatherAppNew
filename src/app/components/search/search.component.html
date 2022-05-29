@@ -1,0 +1,49 @@
+<div class="search-container">
+  <div class="search-block">
+    <form (submit)="onSearch(cityName.value)" #searchForm="ngForm">
+      <input
+        #cityName
+        type="text"
+        name="search"
+        class="search-box"
+        [placeholder]="placeHolder"
+        autocomplete="off"
+        [(ngModel)]="location"
+      />
+      <button
+        mat-flat-button
+        color="primary"
+        class="search-submit"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div class="error-block text-danger" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+</div>
+
+<!-- <mat-toolbar>
+<form (submit)="onSearch(searchForm)" #searchForm="ngForm">
+  <mat-form-field class="form-field">
+    <input
+      matInput
+      [(ngModel)]="location"
+      #loc="ngModel"
+      name="loc"
+      required
+      type="text"
+      [placeholder]="placeHolder"
+      autocomplete="off"
+    />
+     <mat-error *ngIf="location?.invalid && (location?.dirty || location?.touched)">
+      <span *ngIf="location?.errors['required']"> Location is required. </span>
+    </mat-error>
+  </mat-form-field>
+  <button mat-flat-button color="primary">Find</button>
+</form>
+</mat-toolbar> -->
+
+<wa-weather-card></wa-weather-card>
