@@ -24,26 +24,4 @@
     {{ errorMessage }}
   </div>
 </div>
-
-<!-- <mat-toolbar>
-<form (submit)="onSearch(searchForm)" #searchForm="ngForm">
-  <mat-form-field class="form-field">
-    <input
-      matInput
-      [(ngModel)]="location"
-      #loc="ngModel"
-      name="loc"
-      required
-      type="text"
-      [placeholder]="placeHolder"
-      autocomplete="off"
-    />
-     <mat-error *ngIf="location?.invalid && (location?.dirty || location?.touched)">
-      <span *ngIf="location?.errors['required']"> Location is required. </span>
-    </mat-error>
-  </mat-form-field>
-  <button mat-flat-button color="primary">Find</button>
-</form>
-</mat-toolbar> -->
-
 <wa-weather-card></wa-weather-card>

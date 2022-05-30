@@ -12,22 +12,7 @@ describe('SearchComponent', () => {
   let fixture: ComponentFixture<SearchComponent>;
   let weatherFacadeService: WeatherFacadeService;
   const initialState = {};
-  // let errorSub = new Subscription();
   let errorSubObj = new Observable<Subscription>();
-  // const weatherFacadeServiceFactory = {
-  //   getLocation$: {
-  //     subscribe: (f: () => any) => f(),
-  //   },
-  //   getWeatherData$: {
-  //     subscribe: (f: () => any) => f()
-  //   },
-  //   getErrorMessage$: {
-  //     subscribe: (f: any) =>  f()
-  //   },
-  //   setLocation: () => ({}),
-  //   getWeatherData: () => ({}),
-  // };
-
   let dataMock = {};
   let storeStub = {
     select: (fn: Function) => of((id: string) => dataMock),
