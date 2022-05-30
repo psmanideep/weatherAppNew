@@ -12,6 +12,6 @@ describe('CustomDatePipe', () => {
   it('should check day', () => {
     const datePipe = new CustomDatePipe();
     let result = datePipe.transform('123456', 'ddd');
-    expect(result).toStrictEqual('Fri');
+    expect(result).toEqual('Fri');
   });
 });
