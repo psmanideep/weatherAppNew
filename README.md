@@ -7,6 +7,7 @@ Weatherapp is a simple weather forecast app, which uses [OpenWeatherMap](https:/
 <li>Run <b>ng serve</b> for a dev server. Navigate to <a href="http://localhost:4200/">http://localhost:4200/</a> The app will automatically reload if you change any of the source files</li>
 <li>Run <b>ng build</b> to build the project. The build artifacts will be stored in the dist/ directory. Use the --prod flag for a production build</li>
 <li>Run <b>ng test</b> to execute the unit tests via Karma</li>
+<li>Run <b>ng test --no-watch --code-coverage</b> to execute the unit tests and to get the coverage</li>
 <li>Run <b>ng e2e</b> to execute the end-to-end tests via Protractor</li>
 
 ## Libraries and tools
