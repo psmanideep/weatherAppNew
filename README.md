@@ -21,7 +21,7 @@ Weatherapp is a simple weather forecast app, which uses [OpenWeatherMap](https:/
 <li><a href="https://angular.io/guide/testing">Karma</a></li>
 
 ## Architecture
-The app uses MVW architecture to have a bidirectional flow of data, separation of concern, testability, and a lot more. And the NgRx store is designed based on entity features i.e. app can be optimized based on requirements 
+The app uses MVW architecture to have a bidirectional flow of data, separation of concern, testability, and a lot more. And the NgRx store is designed based on entity features i.e. store can be optimized based on requirements, currently implemented for current weatherdata of a city.
 <pre>
 <ul>
   <li><b>Components</b></li>
@@ -34,9 +34,12 @@ The app uses MVW architecture to have a bidirectional flow of data, separation o
       location: 'Bengaluru',
       errorMessage: '',
       weatherData: {
+        dataLoaded: false,
+        // data
       },
-      forecastData: {
-      }
+      forecastData: [
+        {}, {}, ..
+      ]
     }
   }
  </ul>
