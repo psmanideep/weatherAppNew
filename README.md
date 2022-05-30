@@ -22,16 +22,23 @@ Weatherapp is a simple weather forecast app, which uses [OpenWeatherMap](https:/
 ## Architecture
 The app uses MVW architecture to have a bidirectional flow of data, separation of concern, testability, and a lot more. And the NgRx store is designed based on entity features i.e. app can be optimized based on requirements 
 <pre>
-{ 
-  weather: {
-    location: 'Bengaluru',
-    errorMessage: '',
-    weatherData: {
-    },
-    forecastData: {
+<ul>
+  <li><b>Components</b></li>
+  It has 2 components and are communicated through ngRx store  
+    1. search component to enter location/ city name
+    2. weather card component to display the weather data of entered city name
+  <li><b>Store</b></li>
+  { 
+    weather: {
+      location: 'Bengaluru',
+      errorMessage: '',
+      weatherData: {
+      },
+      forecastData: {
+      }
     }
   }
-}
+ </ul>
 </pre>
 
 ## Design
